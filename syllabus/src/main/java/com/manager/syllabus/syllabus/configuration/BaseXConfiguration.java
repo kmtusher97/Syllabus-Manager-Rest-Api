@@ -15,10 +15,10 @@ public class BaseXConfiguration {
 
     @Bean
     public BaseXServices baseXServices(){
-        baseXServices = new BaseXServices();
+        baseXRepository = new BaseXRepository();
         baseXRepository.startBaseXServer(DATABASE_NAME);
 
         this.baseXServices = new BaseXServices(baseXRepository.getSession());
-        return baseXServices;
+        return this.baseXServices;
     }
 }
