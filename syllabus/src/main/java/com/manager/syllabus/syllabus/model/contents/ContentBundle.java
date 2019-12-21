@@ -31,5 +31,15 @@ public class ContentBundle implements Serializable {
         return id;
     }
 
-
+    /**
+     * @return ContentBundle
+     */
+    public ContentBundle getInitialContentBundle() {
+        return new ContentBundle(
+                0,
+                0,
+                (new TextArea()).getInitialTextArea(0),
+                (new Table()).getInitialTable(0)
+        );
+    }
 }
