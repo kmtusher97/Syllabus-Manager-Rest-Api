@@ -32,4 +32,7 @@ public class TextArea implements Serializable {
         return textAreaId;
     }
 
+    public TextArea getInitialTextArea(Integer textAreaId) {
+        return new TextArea(textAreaId, "Untitled TextArea", "Empty Text Body");
+    }
 }

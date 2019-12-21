@@ -38,4 +38,11 @@ public class TableRow implements Serializable {
         return cells;
     }
 
+
+    public void addCell() {
+        if (this.cells == null) {
+            this.cells = new ArrayList<>();
+        }
+        this.cells.add("cell" + this.cells.size());
+    }
 }
