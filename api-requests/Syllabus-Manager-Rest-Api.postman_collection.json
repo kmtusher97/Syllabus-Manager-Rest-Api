@@ -1,0 +1,446 @@
+{
+	"info": {
+		"_postman_id": "14e0f6a6-75c8-f6b4-4de4-3f4dccc38150",
+		"name": "Syllabus-Manager-Rest-Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Syllabus-Services",
+			"item": [
+				{
+					"name": "localhost:8081/syllabus/get/:syllabusName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/syllabus/get/:syllabusName",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"syllabus",
+								"get",
+								":syllabusName"
+							],
+							"variable": [
+								{
+									"key": "syllabusName",
+									"value": "syl1",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/syllabus/edit/:syllabusName/add/year",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/syllabus/edit/:syllabusName/add/year",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"syllabus",
+								"edit",
+								":syllabusName",
+								"add",
+								"year"
+							],
+							"variable": [
+								{
+									"key": "syllabusName",
+									"value": "syl1",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/syllabus/edit/:syllabusName/delete/year/:yearId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/syllabus/edit/:syllabusName/delete/year/:yearId",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"syllabus",
+								"edit",
+								":syllabusName",
+								"delete",
+								"year",
+								":yearId"
+							],
+							"variable": [
+								{
+									"key": "syllabusName",
+									"value": "syl1",
+									"type": "string"
+								},
+								{
+									"key": "yearId",
+									"value": "1",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/syllabus/edit/:syllabusName/:yearId/add/semester",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/syllabus/edit/:syllabusName/:yearId/add/semester",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"syllabus",
+								"edit",
+								":syllabusName",
+								":yearId",
+								"add",
+								"semester"
+							],
+							"variable": [
+								{
+									"key": "syllabusName",
+									"value": "syl1",
+									"type": "string"
+								},
+								{
+									"key": "yearId",
+									"value": "1",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/syllabus/edit/:syllabusName/:yearId/delete/semester/:semesterId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/syllabus/edit/:syllabusName/:yearId/delete/semester/:semesterId",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"syllabus",
+								"edit",
+								":syllabusName",
+								":yearId",
+								"delete",
+								"semester",
+								":semesterId"
+							],
+							"variable": [
+								{
+									"key": "syllabusName",
+									"value": "syl1",
+									"type": "string"
+								},
+								{
+									"key": "yearId",
+									"value": "1",
+									"type": "string"
+								},
+								{
+									"key": "semesterId",
+									"value": "1",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/syllabus/edit/:syllabusName/:yearId/:semesterId/add/course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"courseCode\": \"CSE 101\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8081/syllabus/edit/:syllabusName/:yearId/:semesterId/add/course",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"syllabus",
+								"edit",
+								":syllabusName",
+								":yearId",
+								":semesterId",
+								"add",
+								"course"
+							],
+							"variable": [
+								{
+									"key": "syllabusName",
+									"value": "syl1",
+									"type": "string"
+								},
+								{
+									"key": "yearId",
+									"value": "1",
+									"type": "string"
+								},
+								{
+									"key": "semesterId",
+									"value": "1",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/syllabus/edit/:syllabusName/:yearId/:semesterId/delete/course/:courseCode",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8081/syllabus/edit/:syllabusName/:yearId/:semesterId/delete/course/:courseCode",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"syllabus",
+								"edit",
+								":syllabusName",
+								":yearId",
+								":semesterId",
+								"delete",
+								"course",
+								":courseCode"
+							],
+							"variable": [
+								{
+									"key": "syllabusName",
+									"value": "syl1",
+									"type": "string"
+								},
+								{
+									"key": "yearId",
+									"value": "1",
+									"type": "string"
+								},
+								{
+									"key": "semesterId",
+									"value": "1",
+									"type": "string"
+								},
+								{
+									"key": "courseCode",
+									"value": "CSE 101",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Course-Type-Services",
+			"item": [
+				{
+					"name": "localhost:8081/syllabus/courseType/:syllabusName/get/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/syllabus/courseType/:syllabusName/get/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"syllabus",
+								"courseType",
+								":syllabusName",
+								"get",
+								"all"
+							],
+							"variable": [
+								{
+									"key": "syllabusName",
+									"value": "syl1",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/syllabus/course_type/edit/:syllabusName/add/course_type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Thesis\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8081/syllabus/course_type/edit/:syllabusName/add/course_type",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"syllabus",
+								"course_type",
+								"edit",
+								":syllabusName",
+								"add",
+								"course_type"
+							],
+							"variable": [
+								{
+									"key": "syllabusName",
+									"value": "syl1",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/syllabus/course_type/edit/:syllabusName/delete/course_type/:courseType",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8081/syllabus/course_type/edit/:syllabusName/delete/course_type/:courseType",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"syllabus",
+								"course_type",
+								"edit",
+								":syllabusName",
+								"delete",
+								"course_type",
+								":courseType"
+							],
+							"variable": [
+								{
+									"id": "348cca10-1678-4c16-aa44-6c8ac2561b1d",
+									"key": "syllabusName",
+									"value": "syl1",
+									"type": "string"
+								},
+								{
+									"id": "43d810db-a8f6-46b2-88d9-b1a864b12e1a",
+									"key": "courseType",
+									"value": "Thesis",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/syllabus/course_type/:syllabusName/get/:courseTypeName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/syllabus/course_type/:syllabusName/get/:courseTypeName",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"syllabus",
+								"course_type",
+								":syllabusName",
+								"get",
+								":courseTypeName"
+							],
+							"variable": [
+								{
+									"id": "1c96b04c-8ad0-432c-b7f2-9106313e859c",
+									"key": "syllabusName",
+									"value": "syl1",
+									"type": "string"
+								},
+								{
+									"id": "7630da5d-f875-4049-a9e5-9ca5f2af59dd",
+									"key": "courseTypeName",
+									"value": "Theory",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
