@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<syllabus/>
+<syllabuses>
+    <syllabus name="syl1">
+        <courseTypes>
+            <courseType name="Theory"/>
+            <courseType name="Lab"/>
+            <courseType name="viva"/>
+        </courseTypes>
+        <year id="1"/>
+        <year id="2"/>
+    </syllabus>
+    <syllabus name="syl2">
+        <courseTypes/>
+    </syllabus>
+</syllabuses>
