@@ -1,7 +1,7 @@
 package com.manager.syllabus.syllabus.configuration;
 
 import com.manager.syllabus.syllabus.repository.BaseXRepository;
-import com.manager.syllabus.syllabus.service.BaseXServices;
+import com.manager.syllabus.syllabus.service.basex.BaseXServices;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

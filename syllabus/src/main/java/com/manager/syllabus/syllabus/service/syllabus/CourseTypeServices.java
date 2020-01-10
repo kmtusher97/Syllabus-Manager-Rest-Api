@@ -1,7 +1,7 @@
 package com.manager.syllabus.syllabus.service.syllabus;
 
-import com.manager.syllabus.syllabus.service.BaseXServices;
-import com.manager.syllabus.syllabus.service.JAXBServices;
+import com.manager.syllabus.syllabus.service.basex.BaseXServices;
+import com.manager.syllabus.syllabus.service.jaxb.JAXBServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.manager.syllabus.syllabus.service;
+package com.manager.syllabus.syllabus.service.basex;
 
 import lombok.NoArgsConstructor;
 import org.basex.api.client.ClientSession;

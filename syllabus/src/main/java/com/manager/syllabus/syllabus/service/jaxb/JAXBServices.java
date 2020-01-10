@@ -1,4 +1,4 @@
-package com.manager.syllabus.syllabus.service;
+package com.manager.syllabus.syllabus.service.jaxb;
 
 import org.springframework.stereotype.Service;
 
