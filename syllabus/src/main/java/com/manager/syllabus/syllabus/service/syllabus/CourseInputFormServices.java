@@ -40,6 +40,11 @@ public class CourseInputFormServices {
         );
     }
 
+    /**
+     * @param syllabusName
+     * @param courseTypeName
+     * @return
+     */
     public String getCourseInputForm(String syllabusName, String courseTypeName) {
         return baseXServices.read(
                 "//syllabus[@name=\""
@@ -72,7 +77,7 @@ public class CourseInputFormServices {
                 baseXServices.read(
                         "data(//syllabus[@name=\"" + syllabusName
                                 + "\"]//courseType[@name=\"" + courseTypeName
-                                + "\"]//courseInputForm//*[last()]//@serialId)"
+                                + "\"]//courseInputForm//courseInputFormSections//*[last()]//@serialId)"
                 )
         );
     }
@@ -108,7 +113,7 @@ public class CourseInputFormServices {
                 "insert node "
                         + jaxbServices.objectToXmlString(newFormSection, false)
                         + " into //syllabus[@name=\"" + syllabusName + "\"]//courseType[@name=\""
-                        + courseTypeName + "\"]//courseInputForm"
+                        + courseTypeName + "\"]//courseInputForm//courseInputFormSections"
         );
 
         return getCourseInputForm(syllabusName, courseTypeName);
@@ -150,7 +155,7 @@ public class CourseInputFormServices {
         baseXServices.write(
                 "delete node //syllabus[@name=\"" + syllabusName
                         + "\"]//courseType[@name=\"" + courseTypeName
-                        + "\"]//courseInputForm//courseInputFormSection[@serialId=\""
+                        + "\"]//courseInputForm//courseInputFormSections//courseInputFormSection[@serialId=\""
                         + sectionSerialId + "\"]"
         );
 
