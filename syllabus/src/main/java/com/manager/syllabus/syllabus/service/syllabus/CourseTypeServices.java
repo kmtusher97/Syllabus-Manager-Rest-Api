@@ -16,6 +16,9 @@ public class CourseTypeServices {
 
     private static JAXBServices jaxbServices = new JAXBServices();
 
+    @Autowired
+    private CourseInputFormServices courseInputFormServices;
+
     /**
      * @param syllabusName
      * @return
@@ -80,6 +83,7 @@ public class CourseTypeServices {
                 "insert node <courseType name=\"" + courseTypeName + "\"/> into //syllabus[@name=\"" +
                         syllabusName + "\"]/courseTypes"
         );
+        courseInputFormServices.createInitialForm(syllabusName, courseTypeName);
         return getCourseTypes(syllabusName);
     }
 
