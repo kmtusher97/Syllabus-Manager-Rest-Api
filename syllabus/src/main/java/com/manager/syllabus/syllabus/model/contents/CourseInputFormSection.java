@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@XmlRootElement(name = "CourseInputFormSection")
+@XmlRootElement(name = "courseInputFormSection")
 public class CourseInputFormSection {
     private Integer serialId;
 
