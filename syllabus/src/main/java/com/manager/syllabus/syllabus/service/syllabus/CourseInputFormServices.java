@@ -7,6 +7,10 @@ import com.manager.syllabus.syllabus.service.jaxb.JAXBServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 @Service
 public class CourseInputFormServices {
 
@@ -19,6 +23,7 @@ public class CourseInputFormServices {
     private JAXBServices jaxbServices = new JAXBServices();
 
     private static final Integer FIRST_INDEX_OF_FORM_SECTIONS = 101;
+    private static final List<String> CONTENT_NAMES = new ArrayList<>(Arrays.asList("Table", "TextArea"));
 
     /**
      * @param syllabusName
@@ -153,4 +158,37 @@ public class CourseInputFormServices {
     }
 
 
+    /**
+     * @param syllabusName
+     * @param courseTypeName
+     * @param sectionSerialId
+     * @param selectedContent
+     * @return
+     */
+    public String changeSelectedContentOfFormSection(
+            String syllabusName, String courseTypeName, Integer sectionSerialId, String selectedContent
+    ) {
+        if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false ||
+                doesFormSectionExist(syllabusName, courseTypeName, sectionSerialId) == false ||
+                CONTENT_NAMES.contains(selectedContent) == false) {
+            return getCourseInputForm(syllabusName, courseTypeName);
+        }
+
+        baseXServices.write(
+                "delete node //syllabus[@name=\""
+                        + syllabusName + "\"]//courseType[@name=\""
+                        + courseTypeName + "\"]//courseInputForm//courseInputFormSection[@serialId=\""
+                        + sectionSerialId + "\"]//selectedContent"
+        );
+
+        baseXServices.write(
+                "insert node <selectedContent>"
+                        + selectedContent + "</selectedContent> as first into //syllabus[@name=\""
+                        + syllabusName + "\"]//courseType[@name=\""
+                        + courseTypeName + "\"]//courseInputForm//courseInputFormSection[@serialId=\""
+                        + sectionSerialId + "\"]"
+        );
+
+        return getCourseInputForm(syllabusName, courseTypeName);
+    }
 }

@@ -31,4 +31,16 @@ public class CourseInputFromCreatorController {
                 syllabusName, courseTypeName, sectionSerialId
         );
     }
+
+    @GetMapping("{syllabusName}/{courseTypeName}/{sectionSerialId}/change_selected/{selectedContent}")
+    public String changeSelectedContentOfFormSection(
+            @PathVariable("syllabusName") String syllabusName,
+            @PathVariable("courseTypeName") String courseTypeName,
+            @PathVariable("sectionSerialId") Integer sectionSerialId,
+            @PathVariable("selectedContent") String selectedContent
+    ) {
+        return courseInputFormServices.changeSelectedContentOfFormSection(
+                syllabusName, courseTypeName, sectionSerialId, selectedContent
+        );
+    }
 }
