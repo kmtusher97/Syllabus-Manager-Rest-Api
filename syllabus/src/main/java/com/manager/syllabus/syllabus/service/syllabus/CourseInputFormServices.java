@@ -108,4 +108,49 @@ public class CourseInputFormServices {
 
         return getCourseInputForm(syllabusName, courseTypeName);
     }
+
+    /**
+     * @param syllabusName
+     * @param courseTypeName
+     * @param sectionSerialId
+     * @return
+     */
+    public Boolean doesFormSectionExist(String syllabusName, String courseTypeName, Integer sectionSerialId) {
+        return (
+                baseXServices.read(
+                        "exists(//syllabus[@name=\"" + syllabusName
+                                + "\"]//courseType[@name=\"" + courseTypeName
+                                + "\"]//courseInputForm//courseInputFormSection[@serialId=\""
+                                + sectionSerialId + "\"])"
+                ).equals("true")
+        );
+    }
+
+    /**
+     * @param syllabusName
+     * @param courseTypeName
+     * @param sectionSerialId
+     * @return
+     */
+    public String deleteFormSectionBySectionSerialId(
+            String syllabusName, String courseTypeName, Integer sectionSerialId
+    ) {
+        if (courseTypeServices.isCourseTypeExist(syllabusName, courseTypeName) == false) {
+            return getCourseInputForm(syllabusName, courseTypeName);
+        }
+        if (doesFormSectionExist(syllabusName, courseTypeName, sectionSerialId) == false) {
+            return getCourseInputForm(syllabusName, courseTypeName);
+        }
+
+        baseXServices.write(
+                "delete node //syllabus[@name=\"" + syllabusName
+                        + "\"]//courseType[@name=\"" + courseTypeName
+                        + "\"]//courseInputForm//courseInputFormSection[@serialId=\""
+                        + sectionSerialId + "\"]"
+        );
+
+        return getCourseInputForm(syllabusName, courseTypeName);
+    }
+
+
 }

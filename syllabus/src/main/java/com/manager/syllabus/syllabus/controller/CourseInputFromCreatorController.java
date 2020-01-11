@@ -2,10 +2,7 @@ package com.manager.syllabus.syllabus.controller;
 
 import com.manager.syllabus.syllabus.service.syllabus.CourseInputFormServices;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path = "syllabus/create_form")
@@ -21,6 +18,17 @@ public class CourseInputFromCreatorController {
     ) {
         return courseInputFormServices.addNewFormSection(
                 syllabusName, courseTypeName
+        );
+    }
+
+    @DeleteMapping("{syllabusName}/{courseTypeName}/delete_section/{sectionSerialId}")
+    public String deleteFormSectionBySectionSerialId(
+            @PathVariable("syllabusName") String syllabusName,
+            @PathVariable("courseTypeName") String courseTypeName,
+            @PathVariable("sectionSerialId") Integer sectionSerialId
+    ) {
+        return courseInputFormServices.deleteFormSectionBySectionSerialId(
+                syllabusName, courseTypeName, sectionSerialId
         );
     }
 }
