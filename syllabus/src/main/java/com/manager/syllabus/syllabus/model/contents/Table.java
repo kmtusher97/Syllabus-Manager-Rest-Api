@@ -61,7 +61,7 @@ public class Table implements Serializable {
         if (this.fields == null) {
             this.fields = new ArrayList<>();
         }
-        this.fields.add("Field" + this.fields.size());
+        this.fields.add("New Field");
     }
 
     /**
