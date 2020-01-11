@@ -92,7 +92,7 @@ public class CourseInputFormServices {
      * @return
      */
     public String addNewFormSection(String syllabusName, String courseTypeName) {
-        if (courseTypeServices.isCourseTypeExist(syllabusName, courseTypeName) == false) {
+        if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false) {
             return getCourseInputForm(syllabusName, courseTypeName);
         }
 
@@ -135,7 +135,7 @@ public class CourseInputFormServices {
     public String deleteFormSectionBySectionSerialId(
             String syllabusName, String courseTypeName, Integer sectionSerialId
     ) {
-        if (courseTypeServices.isCourseTypeExist(syllabusName, courseTypeName) == false) {
+        if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false) {
             return getCourseInputForm(syllabusName, courseTypeName);
         }
         if (doesFormSectionExist(syllabusName, courseTypeName, sectionSerialId) == false) {

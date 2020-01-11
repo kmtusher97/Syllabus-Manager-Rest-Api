@@ -34,7 +34,7 @@ public class CourseTypeServices {
      * @param courseTypeName
      * @return
      */
-    public Boolean isCourseTypeExist(String syllabusName, String courseTypeName) {
+    public Boolean doesCourseTypeExist(String syllabusName, String courseTypeName) {
         return (
                 baseXServices.read(
                         "exists(//syllabus[@name=\"" + syllabusName + "\"]//courseType[@name=\"" +
@@ -61,7 +61,7 @@ public class CourseTypeServices {
      * @return
      */
     public String getCourseTypeByCourseTypeName(String syllabusName, String courseTypeName) {
-        if (isCourseTypeExist(syllabusName, courseTypeName) == false) {
+        if (doesCourseTypeExist(syllabusName, courseTypeName) == false) {
             return null;
         }
         return baseXServices.read(
@@ -76,7 +76,7 @@ public class CourseTypeServices {
      * @return
      */
     public String addNewCourseType(String syllabusName, String courseTypeName) {
-        if (isCourseTypeExist(syllabusName, courseTypeName) == true) {
+        if (doesCourseTypeExist(syllabusName, courseTypeName) == true) {
             return getCourseTypes(syllabusName);
         }
         baseXServices.write(
@@ -93,7 +93,7 @@ public class CourseTypeServices {
      * @return
      */
     public String deleteCourseType(String syllabusName, String courseTypeName) {
-        if (isCourseTypeExist(syllabusName, courseTypeName) == false) {
+        if (doesCourseTypeExist(syllabusName, courseTypeName) == false) {
             return getCourseTypes(syllabusName);
         }
         baseXServices.write(
