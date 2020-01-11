@@ -43,4 +43,40 @@ public class CourseInputFromCreatorController {
                 syllabusName, courseTypeName, sectionSerialId, selectedContent
         );
     }
+
+    /*--------------------------------------------------------------------------*/
+
+    /**
+     * Methods for for Table
+     */
+
+    /**
+     * @param syllabusName
+     * @param courseTypeName
+     * @param sectionSerialId
+     * @return
+     */
+    @GetMapping("{syllabusName}/{courseTypeName}/{sectionSerialId}/add_field_in_table")
+    public String addNewFieldInTableOfFormSection(
+            @PathVariable("syllabusName") String syllabusName,
+            @PathVariable("courseTypeName") String courseTypeName,
+            @PathVariable("sectionSerialId") Integer sectionSerialId
+    ) {
+        return courseInputFormServices.addNewFieldInTableOfFormSection(
+                syllabusName, courseTypeName, sectionSerialId
+        );
+    }
+
+    @DeleteMapping("{syllabusName}/{courseTypeName}/{sectionSerialId}/delete_table_field/{fieldId}")
+    public String deleteFieldFromTableInFormSectionBySerialNo(
+            @PathVariable("syllabusName") String syllabusName,
+            @PathVariable("courseTypeName") String courseTypeName,
+            @PathVariable("sectionSerialId") Integer sectionSerialId,
+            @PathVariable("fieldId") Integer fieldId
+    ) {
+        return courseInputFormServices.deleteFieldFromTableInFormSectionBySerialNo(
+                syllabusName, courseTypeName, sectionSerialId, fieldId
+        );
+    }
+    /*--------------------------------------------------------------------------*/
 }
