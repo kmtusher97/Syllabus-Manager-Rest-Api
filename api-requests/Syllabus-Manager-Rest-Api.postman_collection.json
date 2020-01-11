@@ -1,18 +1,19 @@
 {
+	"variables": [],
 	"info": {
-		"_postman_id": "14e0f6a6-75c8-f6b4-4de4-3f4dccc38150",
 		"name": "Syllabus-Manager-Rest-Api",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "86a9ed9f-c139-8bfe-f7fc-2a9c365816be",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "Syllabus-Services",
+			"description": "",
 			"item": [
 				{
 					"name": "localhost:8081/syllabus/get/:syllabusName",
 					"request": {
-						"method": "GET",
-						"header": [],
 						"url": {
 							"raw": "localhost:8081/syllabus/get/:syllabusName",
 							"host": [
@@ -24,22 +25,27 @@
 								"get",
 								":syllabusName"
 							],
+							"query": [],
 							"variable": [
 								{
 									"key": "syllabusName",
-									"value": "syl1",
-									"type": "string"
+									"value": "syl1"
 								}
 							]
-						}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
 					},
 					"response": []
 				},
 				{
 					"name": "localhost:8081/syllabus/edit/:syllabusName/add/year",
 					"request": {
-						"method": "GET",
-						"header": [],
 						"url": {
 							"raw": "localhost:8081/syllabus/edit/:syllabusName/add/year",
 							"host": [
@@ -53,22 +59,27 @@
 								"add",
 								"year"
 							],
+							"query": [],
 							"variable": [
 								{
 									"key": "syllabusName",
-									"value": "syl1",
-									"type": "string"
+									"value": "syl1"
 								}
 							]
-						}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
 					},
 					"response": []
 				},
 				{
 					"name": "localhost:8081/syllabus/edit/:syllabusName/delete/year/:yearId",
 					"request": {
-						"method": "GET",
-						"header": [],
 						"url": {
 							"raw": "localhost:8081/syllabus/edit/:syllabusName/delete/year/:yearId",
 							"host": [
@@ -83,27 +94,31 @@
 								"year",
 								":yearId"
 							],
+							"query": [],
 							"variable": [
 								{
 									"key": "syllabusName",
-									"value": "syl1",
-									"type": "string"
+									"value": "syl1"
 								},
 								{
 									"key": "yearId",
-									"value": "1",
-									"type": "string"
+									"value": "1"
 								}
 							]
-						}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
 					},
 					"response": []
 				},
 				{
 					"name": "localhost:8081/syllabus/edit/:syllabusName/:yearId/add/semester",
 					"request": {
-						"method": "GET",
-						"header": [],
 						"url": {
 							"raw": "localhost:8081/syllabus/edit/:syllabusName/:yearId/add/semester",
 							"host": [
@@ -118,27 +133,31 @@
 								"add",
 								"semester"
 							],
+							"query": [],
 							"variable": [
 								{
 									"key": "syllabusName",
-									"value": "syl1",
-									"type": "string"
+									"value": "syl1"
 								},
 								{
 									"key": "yearId",
-									"value": "1",
-									"type": "string"
+									"value": "1"
 								}
 							]
-						}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
 					},
 					"response": []
 				},
 				{
 					"name": "localhost:8081/syllabus/edit/:syllabusName/:yearId/delete/semester/:semesterId",
 					"request": {
-						"method": "GET",
-						"header": [],
 						"url": {
 							"raw": "localhost:8081/syllabus/edit/:syllabusName/:yearId/delete/semester/:semesterId",
 							"host": [
@@ -154,41 +173,35 @@
 								"semester",
 								":semesterId"
 							],
+							"query": [],
 							"variable": [
 								{
 									"key": "syllabusName",
-									"value": "syl1",
-									"type": "string"
+									"value": "syl1"
 								},
 								{
 									"key": "yearId",
-									"value": "1",
-									"type": "string"
+									"value": "1"
 								},
 								{
 									"key": "semesterId",
-									"value": "1",
-									"type": "string"
+									"value": "1"
 								}
 							]
-						}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
 					},
 					"response": []
 				},
 				{
 					"name": "localhost:8081/syllabus/edit/:syllabusName/:yearId/:semesterId/add/course",
 					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"courseCode\": \"CSE 101\"\n}"
-						},
 						"url": {
 							"raw": "localhost:8081/syllabus/edit/:syllabusName/:yearId/:semesterId/add/course",
 							"host": [
@@ -204,31 +217,23 @@
 								"add",
 								"course"
 							],
+							"query": [],
 							"variable": [
 								{
 									"key": "syllabusName",
-									"value": "syl1",
-									"type": "string"
+									"value": "syl1"
 								},
 								{
 									"key": "yearId",
-									"value": "1",
-									"type": "string"
+									"value": "1"
 								},
 								{
 									"key": "semesterId",
-									"value": "1",
-									"type": "string"
+									"value": "1"
 								}
 							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8081/syllabus/edit/:syllabusName/:yearId/:semesterId/delete/course/:courseCode",
-					"request": {
-						"method": "DELETE",
+						},
+						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -237,8 +242,15 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"courseCode\": \"CSE 101\"\n}"
 						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/syllabus/edit/:syllabusName/:yearId/:semesterId/delete/course/:courseCode",
+					"request": {
 						"url": {
 							"raw": "localhost:8081/syllabus/edit/:syllabusName/:yearId/:semesterId/delete/course/:courseCode",
 							"host": [
@@ -255,43 +267,50 @@
 								"course",
 								":courseCode"
 							],
+							"query": [],
 							"variable": [
 								{
 									"key": "syllabusName",
-									"value": "syl1",
-									"type": "string"
+									"value": "syl1"
 								},
 								{
 									"key": "yearId",
-									"value": "1",
-									"type": "string"
+									"value": "1"
 								},
 								{
 									"key": "semesterId",
-									"value": "1",
-									"type": "string"
+									"value": "1"
 								},
 								{
 									"key": "courseCode",
-									"value": "CSE 101",
-									"type": "string"
+									"value": "CSE 101"
 								}
 							]
-						}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Course-Type-Services",
+			"description": "",
 			"item": [
 				{
 					"name": "localhost:8081/syllabus/courseType/:syllabusName/get/all",
 					"request": {
-						"method": "GET",
-						"header": [],
 						"url": {
 							"raw": "localhost:8081/syllabus/courseType/:syllabusName/get/all",
 							"host": [
@@ -305,31 +324,27 @@
 								"get",
 								"all"
 							],
+							"query": [],
 							"variable": [
 								{
 									"key": "syllabusName",
-									"value": "syl1",
-									"type": "string"
+									"value": "syl1"
 								}
 							]
-						}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
 					},
 					"response": []
 				},
 				{
 					"name": "localhost:8081/syllabus/course_type/edit/:syllabusName/add/course_type",
 					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"Thesis\"\n}"
-						},
 						"url": {
 							"raw": "localhost:8081/syllabus/course_type/edit/:syllabusName/add/course_type",
 							"host": [
@@ -344,21 +359,15 @@
 								"add",
 								"course_type"
 							],
+							"query": [],
 							"variable": [
 								{
 									"key": "syllabusName",
-									"value": "syl1",
-									"type": "string"
+									"value": "syl1"
 								}
 							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8081/syllabus/course_type/edit/:syllabusName/delete/course_type/:courseType",
-					"request": {
-						"method": "DELETE",
+						},
+						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -367,8 +376,15 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"Thesis\"\n}"
 						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/syllabus/course_type/edit/:syllabusName/delete/course_type/:courseType",
+					"request": {
 						"url": {
 							"raw": "localhost:8081/syllabus/course_type/edit/:syllabusName/delete/course_type/:courseType",
 							"host": [
@@ -384,29 +400,36 @@
 								"course_type",
 								":courseType"
 							],
+							"query": [],
 							"variable": [
 								{
-									"id": "348cca10-1678-4c16-aa44-6c8ac2561b1d",
 									"key": "syllabusName",
-									"value": "syl1",
-									"type": "string"
+									"value": "syl1"
 								},
 								{
-									"id": "43d810db-a8f6-46b2-88d9-b1a864b12e1a",
 									"key": "courseType",
-									"value": "Thesis",
-									"type": "string"
+									"value": "Thesis"
 								}
 							]
-						}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
 					},
 					"response": []
 				},
 				{
 					"name": "localhost:8081/syllabus/course_type/:syllabusName/get/:courseTypeName",
 					"request": {
-						"method": "GET",
-						"header": [],
 						"url": {
 							"raw": "localhost:8081/syllabus/course_type/:syllabusName/get/:courseTypeName",
 							"host": [
@@ -420,27 +443,29 @@
 								"get",
 								":courseTypeName"
 							],
+							"query": [],
 							"variable": [
 								{
-									"id": "1c96b04c-8ad0-432c-b7f2-9106313e859c",
 									"key": "syllabusName",
-									"value": "syl1",
-									"type": "string"
+									"value": "syl1"
 								},
 								{
-									"id": "7630da5d-f875-4049-a9e5-9ca5f2af59dd",
 									"key": "courseTypeName",
-									"value": "Theory",
-									"type": "string"
+									"value": "Theory"
 								}
 							]
-						}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
