@@ -33,11 +33,9 @@ public class CourseInputFormSection {
     public CourseInputFormSection(Integer serialId) {
         this.serialId = serialId;
         this.selectedContent = "TextArea"; /*TextArea, Table*/
-        this.textArea = new TextArea();
-        this.table = new Table();
-
-        this.textArea.getInitialTextArea(serialId);
-        this.table.getInitialTable(serialId);
+        
+        this.textArea = new TextArea().getInitialTextArea(serialId);
+        this.table = new Table().getInitialTable(serialId);
     }
 
 
