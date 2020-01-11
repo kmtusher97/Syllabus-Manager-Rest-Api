@@ -31,4 +31,17 @@ public class CourseInputForm {
     public SortedSet<CourseInputFormSection> getCourseInputFormSectionList() {
         return courseInputFormSectionList;
     }
+
+    /**
+     * @param courseInputFormSection
+     */
+    public void addCourseInputFormSection(CourseInputFormSection courseInputFormSection) {
+        if (this.courseInputFormSectionList.isEmpty()) {
+            this.courseInputFormSectionList =
+                    new TreeSet<CourseInputFormSection>(
+                            Comparator.comparing(CourseInputFormSection::getSerialId)
+                    );
+        }
+        this.courseInputFormSectionList.add(courseInputFormSection);
+    }
 }
