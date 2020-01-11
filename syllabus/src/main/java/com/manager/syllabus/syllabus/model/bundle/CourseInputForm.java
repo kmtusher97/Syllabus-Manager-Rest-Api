@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Comparator;
 import java.util.SortedSet;
@@ -27,6 +28,7 @@ public class CourseInputForm {
                 );
     }
 
+    @XmlElementWrapper(name = "courseInputFormSections")
     @XmlElement(name = "courseInputFormSection")
     public SortedSet<CourseInputFormSection> getCourseInputFormSectionList() {
         return courseInputFormSectionList;
