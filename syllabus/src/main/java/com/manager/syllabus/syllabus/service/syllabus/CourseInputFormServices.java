@@ -269,4 +269,31 @@ public class CourseInputFormServices {
 
         return getCourseInputForm(syllabusName, courseTypeName);
     }
+
+    public CourseInputForm saveOrUpdateFormStructure(
+            String syllabusName, String courseTypeName, CourseInputForm courseInputForm
+    ) {
+        if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false) {
+            return null;
+        }
+
+        /*baseXServices.write(
+                "delete node //syllabus[@name=\""
+                        + syllabusName + "\"]//courseType[@name=\""
+                        + courseTypeName + "\"]//courseInputForm"
+        );
+
+        baseXServices.write(
+                "insert node "
+                        + jaxbServices.objectToXmlString(courseInputForm, false)
+                        + " into /syllabus[@name=\""
+                        + syllabusName + "\"]//courseType[@name=\""
+                        + courseTypeName + "\"]"
+        );*/
+
+        return (CourseInputForm) jaxbServices.xmlStringToObject(
+                getCourseInputForm(syllabusName, courseTypeName),
+                new CourseInputForm()
+        );
+    }
 }
