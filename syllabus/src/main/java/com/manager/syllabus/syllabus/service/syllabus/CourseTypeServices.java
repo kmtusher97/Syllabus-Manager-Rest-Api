@@ -34,7 +34,7 @@ public class CourseTypeServices {
      * @param courseTypeName
      * @return
      */
-    private Boolean isCourseTypeExist(String syllabusName, String courseTypeName) {
+    public Boolean isCourseTypeExist(String syllabusName, String courseTypeName) {
         return (
                 baseXServices.read(
                         "exists(//syllabus[@name=\"" + syllabusName + "\"]//courseType[@name=\"" +
