@@ -43,6 +43,15 @@ public class TableRow implements Serializable {
         if (this.cells == null) {
             this.cells = new ArrayList<>();
         }
-        this.cells.add("cell" + this.cells.size());
+        this.cells.add("");
+    }
+
+    /**
+     * @param numberOfFields
+     */
+    public void formRow(Integer numberOfFields) {
+        for (Integer i = 0; i < numberOfFields; i++) {
+            addCell();
+        }
     }
 }
