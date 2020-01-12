@@ -54,4 +54,14 @@ public class TableRow implements Serializable {
             addCell();
         }
     }
+
+    /**
+     * @param cellId
+     */
+    public void deleteCell(int cellId) {
+        if (this.cells == null) {
+            this.cells = new ArrayList<>();
+        }
+        this.cells.remove(cellId);
+    }
 }

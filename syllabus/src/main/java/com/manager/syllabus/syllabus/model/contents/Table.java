@@ -62,12 +62,19 @@ public class Table implements Serializable {
             this.fields = new ArrayList<>();
         }
         this.fields.add("New Field");
+
+        if (this.rows == null) {
+            this.rows = new ArrayList<>();
+        }
+        for (TableRow row : this.rows) {
+            row.addCell();
+        }
     }
 
     /**
      * @param fieldNo
      */
-    public void deleteFieldName(int fieldNo) {
+    public void deleteField(int fieldNo) {
         if (this.fields == null) {
             this.fields = new ArrayList<>();
         }
@@ -75,6 +82,13 @@ public class Table implements Serializable {
             return;
         }
         this.fields.remove(fieldNo);
+
+        if (this.rows == null) {
+            this.rows = new ArrayList<>();
+        }
+        for (TableRow row : this.rows) {
+            row.deleteCell(fieldNo);
+        }
     }
 
     /**
