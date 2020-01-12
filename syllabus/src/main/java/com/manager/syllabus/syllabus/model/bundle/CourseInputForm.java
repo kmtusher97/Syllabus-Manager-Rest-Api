@@ -2,48 +2,39 @@ package com.manager.syllabus.syllabus.model.bundle;
 
 import com.manager.syllabus.syllabus.model.contents.CourseInputFormSection;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.Comparator;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.List;
+import java.util.ArrayList;
 
 
 @Setter
 @ToString
+@NoArgsConstructor
 @AllArgsConstructor
 @XmlRootElement(name = "courseInputForm")
 public class CourseInputForm {
 
-    private SortedSet<CourseInputFormSection> courseInputFormSectionList;
-
-    public CourseInputForm() {
-        this.courseInputFormSectionList =
-                new TreeSet<CourseInputFormSection>(
-                        Comparator.comparing(CourseInputFormSection::getSerialId)
-                );
-    }
+    private List<CourseInputFormSection> courseInputFormSections = new ArrayList<>();
 
     @XmlElementWrapper(name = "courseInputFormSections")
     @XmlElement(name = "courseInputFormSection")
-    public SortedSet<CourseInputFormSection> getCourseInputFormSectionList() {
-        return courseInputFormSectionList;
+    public List<CourseInputFormSection> getCourseInputFormSections() {
+        return courseInputFormSections;
     }
 
     /**
      * @param courseInputFormSection
      */
     public void addCourseInputFormSection(CourseInputFormSection courseInputFormSection) {
-        if (this.courseInputFormSectionList.isEmpty()) {
-            this.courseInputFormSectionList =
-                    new TreeSet<CourseInputFormSection>(
-                            Comparator.comparing(CourseInputFormSection::getSerialId)
-                    );
+        if (this.courseInputFormSections.isEmpty()) {
+            this.courseInputFormSections = new ArrayList<>();
         }
-        this.courseInputFormSectionList.add(courseInputFormSection);
+        this.courseInputFormSections.add(courseInputFormSection);
     }
 }
