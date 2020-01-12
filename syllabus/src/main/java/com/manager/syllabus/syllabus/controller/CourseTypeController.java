@@ -26,7 +26,7 @@ public class CourseTypeController {
         return courseTypeServices.getCourseTypeByCourseTypeName(syllabusName, courseTypeName);
     }
 
-    @PostMapping("/edit/{syllabusName}/add/course_type/{courseTypeName}")
+    @GetMapping("/edit/{syllabusName}/add/course_type/{courseTypeName}")
     public String addNewCourseType(
             @PathVariable("syllabusName") String syllabusName,
             @PathVariable("courseTypeName") String courseTypeName

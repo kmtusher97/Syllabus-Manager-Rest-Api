@@ -12,7 +12,7 @@ public class SyllabusEditorController {
     @Autowired
     private SyllabusServices syllabusServices;
 
-    @PostMapping("/{syllabusName}/add/year")
+    @GetMapping("/{syllabusName}/add/year")
     public String addYear(
             @PathVariable("syllabusName") String syllabusName
     ) {
@@ -27,7 +27,7 @@ public class SyllabusEditorController {
         return syllabusServices.deleteYearById(syllabusName, yearId);
     }
 
-    @PostMapping("/{syllabusName}/{yearId}/add/semester")
+    @GetMapping("/{syllabusName}/{yearId}/add/semester")
     public String addSemesterIntoYear(
             @PathVariable("syllabusName") String syllabusName,
             @PathVariable("yearId") Integer yearId
