@@ -45,19 +45,12 @@ public class CourseInputFromCreatorController {
         );
     }
 
-    /*--------------------------------------------------------------------------*/
-
+    /**************************************************************************************/
     /**
      * Methods for for Table
      */
 
-    /**
-     * @param syllabusName
-     * @param courseTypeName
-     * @param sectionSerialId
-     * @return
-     */
-    @GetMapping("{syllabusName}/{courseTypeName}/{sectionSerialId}/add_field_in_table")
+    @GetMapping("{syllabusName}/{courseTypeName}/{sectionSerialId}/table/add_field")
     public CourseInputForm addNewFieldInTableOfFormSection(
             @PathVariable("syllabusName") String syllabusName,
             @PathVariable("courseTypeName") String courseTypeName,
@@ -68,7 +61,7 @@ public class CourseInputFromCreatorController {
         );
     }
 
-    @DeleteMapping("{syllabusName}/{courseTypeName}/{sectionSerialId}/delete_table_field/{fieldId}")
+    @DeleteMapping("{syllabusName}/{courseTypeName}/{sectionSerialId}/table/delete_field/{fieldId}")
     public CourseInputForm deleteFieldFromTableInFormSectionBySerialNo(
             @PathVariable("syllabusName") String syllabusName,
             @PathVariable("courseTypeName") String courseTypeName,
@@ -79,7 +72,30 @@ public class CourseInputFromCreatorController {
                 syllabusName, courseTypeName, sectionSerialId, fieldId
         );
     }
-    /*--------------------------------------------------------------------------*/
+
+    @GetMapping("{syllabusName}/{courseTypeName}/{sectionSerialId}/table/add_row")
+    public CourseInputForm addNewRowInTableInFormSection(
+            @PathVariable("syllabusName") String syllabusName,
+            @PathVariable("courseTypeName") String courseTypeName,
+            @PathVariable("sectionSerialId") Integer sectionSerialId
+    ) {
+        return courseInputFormServices.addNewRowInTableInFormSection(
+                syllabusName, courseTypeName, sectionSerialId
+        );
+    }
+
+    @DeleteMapping("{syllabusName}/{courseTypeName}/{sectionSerialId}/table/delete_row/{rowId}")
+    public CourseInputForm deleteRowFromTableInFormSection(
+            @PathVariable("syllabusName") String syllabusName,
+            @PathVariable("courseTypeName") String courseTypeName,
+            @PathVariable("sectionSerialId") Integer sectionSerialId,
+            @PathVariable("rowId") Integer rowId
+    ) {
+        return courseInputFormServices.deleteRowFromTableInFormSection(
+                syllabusName, courseTypeName, sectionSerialId, rowId
+        );
+    }
+    /***************************************************************************************/
 
     @PostMapping("{syllabusName}/{courseTypeName}/auto_save")
     public CourseInputForm autoSaveFormStructure(

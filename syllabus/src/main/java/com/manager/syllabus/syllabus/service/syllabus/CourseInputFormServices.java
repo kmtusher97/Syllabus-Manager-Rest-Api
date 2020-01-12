@@ -20,6 +20,9 @@ public class CourseInputFormServices {
     @Autowired
     private CourseTypeServices courseTypeServices;
 
+    @Autowired
+    private FormContentTableServices formContentTableServices;
+
     private JAXBServices jaxbServices = new JAXBServices();
 
     private static final Integer FIRST_INDEX_OF_FORM_SECTIONS = 101;
@@ -201,6 +204,37 @@ public class CourseInputFormServices {
     }
 
 
+    /************************************************************************************************************/
+    /***Methods for Table***/
+
+
+    /**
+     * @param syllabusName
+     * @param courseTypeName
+     * @param sectionSerialId
+     * @param fieldId
+     * @return
+     */
+    public CourseInputForm deleteFieldFromTableInFormSectionBySerialNo(
+            String syllabusName, String courseTypeName, Integer sectionSerialId, Integer fieldId
+    ) {
+        if (courseTypeServices.doesCourseTypeExist(
+                syllabusName, courseTypeName) == false ||
+                doesFormSectionExist(
+                        syllabusName, courseTypeName, sectionSerialId) == false ||
+                formContentTableServices.doesFieldExistInTable(
+                        syllabusName, courseTypeName, sectionSerialId, fieldId) == false
+        ) {
+            return null;
+        }
+
+        formContentTableServices.deleteFieldFromTableInFormSectionBySerialNo(
+                syllabusName, courseTypeName, sectionSerialId, fieldId
+        );
+
+        return getCourseInputForm(syllabusName, courseTypeName);
+    }
+
     /**
      * @param syllabusName
      * @param courseTypeName
@@ -215,14 +249,30 @@ public class CourseInputFormServices {
             return null;
         }
 
-        baseXServices.write(
-                "insert node  <field>New Field</field> as last into //syllabus[@name=\""
-                        + syllabusName + "\"]//courseType[@name=\"" + courseTypeName
-                        + "\"]//courseInputForm//courseInputFormSection[@serialId=\""
-                        + sectionSerialId + "\"]//table[@contentId=\""
-                        + sectionSerialId + "\"]//fields"
+        formContentTableServices.addNewFieldInTableOfFormSection(
+                syllabusName, courseTypeName, sectionSerialId
         );
 
+        return getCourseInputForm(syllabusName, courseTypeName);
+    }
+
+
+    /**
+     * @param syllabusName
+     * @param courseTypeName
+     * @param sectionSerialId
+     * @return
+     */
+    public CourseInputForm addNewRowInTableInFormSection(
+            String syllabusName, String courseTypeName, Integer sectionSerialId
+    ) {
+        if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false ||
+                doesFormSectionExist(syllabusName, courseTypeName, sectionSerialId) == false) {
+            return null;
+        }
+        formContentTableServices.addNewRowInTableInFormSection(
+                syllabusName, courseTypeName, sectionSerialId
+        );
         return getCourseInputForm(syllabusName, courseTypeName);
     }
 
@@ -230,48 +280,27 @@ public class CourseInputFormServices {
      * @param syllabusName
      * @param courseTypeName
      * @param sectionSerialId
-     * @param fieldId
+     * @param rowId
      * @return
      */
-    private Boolean doesFieldExistInTable(
-            String syllabusName, String courseTypeName, Integer sectionSerialId, Integer fieldId
-    ) {
-        return baseXServices.read(
-                "exists(//syllabus[@name=\""
-                        + syllabusName + "\"]//courseType[@name=\"" + courseTypeName
-                        + "\"]//courseInputForm//courseInputFormSection[@serialId=\""
-                        + sectionSerialId + "\"]//table[@contentId=\""
-                        + sectionSerialId + "\"]//fields//field[" + fieldId + "])"
-        ).equals("true");
-    }
-
-    /**
-     * @param syllabusName
-     * @param courseTypeName
-     * @param sectionSerialId
-     * @param fieldId
-     * @return
-     */
-    public CourseInputForm deleteFieldFromTableInFormSectionBySerialNo(
-            String syllabusName, String courseTypeName, Integer sectionSerialId, Integer fieldId
+    public CourseInputForm deleteRowFromTableInFormSection(
+            String syllabusName, String courseTypeName, Integer sectionSerialId, Integer rowId
     ) {
         if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false ||
                 doesFormSectionExist(syllabusName, courseTypeName, sectionSerialId) == false ||
-                doesFieldExistInTable(syllabusName, courseTypeName, sectionSerialId, fieldId) == false
-        ) {
+                formContentTableServices.doesRowExistInTableInFormSection(
+                        syllabusName, courseTypeName, sectionSerialId, rowId) == false) {
             return null;
         }
 
-        baseXServices.write(
-                "delete node //syllabus[@name=\""
-                        + syllabusName + "\"]//courseType[@name=\"" + courseTypeName
-                        + "\"]//courseInputForm//courseInputFormSection[@serialId=\""
-                        + sectionSerialId + "\"]//table[@contentId=\""
-                        + sectionSerialId + "\"]//fields//field[" + fieldId + "]"
+        formContentTableServices.deleteRowFromTableInFormSection(
+                syllabusName, courseTypeName, sectionSerialId, rowId
         );
 
         return getCourseInputForm(syllabusName, courseTypeName);
     }
+    /************************************************************************************************************/
+
 
     /**
      * @param syllabusName
@@ -302,4 +331,6 @@ public class CourseInputFormServices {
 
         return getCourseInputForm(syllabusName, courseTypeName);
     }
+
+
 }
