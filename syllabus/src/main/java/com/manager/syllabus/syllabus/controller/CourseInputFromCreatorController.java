@@ -13,7 +13,7 @@ public class CourseInputFromCreatorController {
     private CourseInputFormServices courseInputFormServices;
 
     @GetMapping("/{syllabusName}/{courseTypeName}/add_new_section")
-    public String addNewFormSection(
+    public CourseInputForm addNewFormSection(
             @PathVariable("syllabusName") String syllabusName,
             @PathVariable("courseTypeName") String courseTypeName
     ) {
@@ -23,7 +23,7 @@ public class CourseInputFromCreatorController {
     }
 
     @DeleteMapping("{syllabusName}/{courseTypeName}/delete_section/{sectionSerialId}")
-    public String deleteFormSectionBySectionSerialId(
+    public CourseInputForm deleteFormSectionBySectionSerialId(
             @PathVariable("syllabusName") String syllabusName,
             @PathVariable("courseTypeName") String courseTypeName,
             @PathVariable("sectionSerialId") Integer sectionSerialId
@@ -34,7 +34,7 @@ public class CourseInputFromCreatorController {
     }
 
     @GetMapping("{syllabusName}/{courseTypeName}/{sectionSerialId}/change_selected/{selectedContent}")
-    public String changeSelectedContentOfFormSection(
+    public CourseInputForm changeSelectedContentOfFormSection(
             @PathVariable("syllabusName") String syllabusName,
             @PathVariable("courseTypeName") String courseTypeName,
             @PathVariable("sectionSerialId") Integer sectionSerialId,
@@ -58,7 +58,7 @@ public class CourseInputFromCreatorController {
      * @return
      */
     @GetMapping("{syllabusName}/{courseTypeName}/{sectionSerialId}/add_field_in_table")
-    public String addNewFieldInTableOfFormSection(
+    public CourseInputForm addNewFieldInTableOfFormSection(
             @PathVariable("syllabusName") String syllabusName,
             @PathVariable("courseTypeName") String courseTypeName,
             @PathVariable("sectionSerialId") Integer sectionSerialId
@@ -69,7 +69,7 @@ public class CourseInputFromCreatorController {
     }
 
     @DeleteMapping("{syllabusName}/{courseTypeName}/{sectionSerialId}/delete_table_field/{fieldId}")
-    public String deleteFieldFromTableInFormSectionBySerialNo(
+    public CourseInputForm deleteFieldFromTableInFormSectionBySerialNo(
             @PathVariable("syllabusName") String syllabusName,
             @PathVariable("courseTypeName") String courseTypeName,
             @PathVariable("sectionSerialId") Integer sectionSerialId,

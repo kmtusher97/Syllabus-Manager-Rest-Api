@@ -45,12 +45,16 @@ public class CourseInputFormServices {
      * @param courseTypeName
      * @return
      */
-    public String getCourseInputForm(String syllabusName, String courseTypeName) {
-        return baseXServices.read(
-                "//syllabus[@name=\""
-                        + syllabusName + "\"]//courseType[@name=\"" + courseTypeName
-                        + "\"]//courseInputForm"
-        );
+    public CourseInputForm getCourseInputForm(String syllabusName, String courseTypeName) {
+        if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false) {
+            return null;
+        }
+        return (CourseInputForm) jaxbServices.xmlStringToObject(
+                baseXServices.read(
+                        "//syllabus[@name=\""
+                                + syllabusName + "\"]//courseType[@name=\"" + courseTypeName
+                                + "\"]//courseInputForm"
+                ), new CourseInputForm());
     }
 
     /**
@@ -101,9 +105,9 @@ public class CourseInputFormServices {
      * @param courseTypeName
      * @return
      */
-    public String addNewFormSection(String syllabusName, String courseTypeName) {
+    public CourseInputForm addNewFormSection(String syllabusName, String courseTypeName) {
         if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false) {
-            return getCourseInputForm(syllabusName, courseTypeName);
+            return null;
         }
 
         Integer newSectionSerialNo = getNewFormSectionSerialNo(syllabusName, courseTypeName);
@@ -142,14 +146,13 @@ public class CourseInputFormServices {
      * @param sectionSerialId
      * @return
      */
-    public String deleteFormSectionBySectionSerialId(
+    public CourseInputForm deleteFormSectionBySectionSerialId(
             String syllabusName, String courseTypeName, Integer sectionSerialId
     ) {
-        if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false) {
-            return getCourseInputForm(syllabusName, courseTypeName);
-        }
-        if (doesFormSectionExist(syllabusName, courseTypeName, sectionSerialId) == false) {
-            return getCourseInputForm(syllabusName, courseTypeName);
+        if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false ||
+                doesFormSectionExist(syllabusName, courseTypeName, sectionSerialId) == false
+        ) {
+            return null;
         }
 
         baseXServices.write(
@@ -170,13 +173,13 @@ public class CourseInputFormServices {
      * @param selectedContent
      * @return
      */
-    public String changeSelectedContentOfFormSection(
+    public CourseInputForm changeSelectedContentOfFormSection(
             String syllabusName, String courseTypeName, Integer sectionSerialId, String selectedContent
     ) {
         if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false ||
                 doesFormSectionExist(syllabusName, courseTypeName, sectionSerialId) == false ||
                 CONTENT_NAMES.contains(selectedContent) == false) {
-            return getCourseInputForm(syllabusName, courseTypeName);
+            return null;
         }
 
         baseXServices.write(
@@ -204,12 +207,12 @@ public class CourseInputFormServices {
      * @param sectionSerialId
      * @return
      */
-    public String addNewFieldInTableOfFormSection(
+    public CourseInputForm addNewFieldInTableOfFormSection(
             String syllabusName, String courseTypeName, Integer sectionSerialId
     ) {
         if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false ||
                 doesFormSectionExist(syllabusName, courseTypeName, sectionSerialId) == false) {
-            return getCourseInputForm(syllabusName, courseTypeName);
+            return null;
         }
 
         baseXServices.write(
@@ -249,14 +252,14 @@ public class CourseInputFormServices {
      * @param fieldId
      * @return
      */
-    public String deleteFieldFromTableInFormSectionBySerialNo(
+    public CourseInputForm deleteFieldFromTableInFormSectionBySerialNo(
             String syllabusName, String courseTypeName, Integer sectionSerialId, Integer fieldId
     ) {
         if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false ||
                 doesFormSectionExist(syllabusName, courseTypeName, sectionSerialId) == false ||
                 doesFieldExistInTable(syllabusName, courseTypeName, sectionSerialId, fieldId) == false
         ) {
-            return getCourseInputForm(syllabusName, courseTypeName);
+            return null;
         }
 
         baseXServices.write(
@@ -297,9 +300,6 @@ public class CourseInputFormServices {
                         + courseTypeName + "\"]"
         );
 
-        return (CourseInputForm) jaxbServices.xmlStringToObject(
-                getCourseInputForm(syllabusName, courseTypeName),
-                new CourseInputForm()
-        );
+        return getCourseInputForm(syllabusName, courseTypeName);
     }
 }
