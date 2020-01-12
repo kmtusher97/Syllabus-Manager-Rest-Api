@@ -1,6 +1,5 @@
 package com.manager.syllabus.syllabus.controller;
 
-import com.manager.syllabus.syllabus.message.RequestResponse;
 import com.manager.syllabus.syllabus.model.bundle.CourseInputForm;
 import com.manager.syllabus.syllabus.service.syllabus.CourseInputFormServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -82,18 +81,14 @@ public class CourseInputFromCreatorController {
     }
     /*--------------------------------------------------------------------------*/
 
-
     @PostMapping("{syllabusName}/{courseTypeName}/auto_save")
-    public RequestResponse autoSaveFormStructure(
+    public CourseInputForm autoSaveFormStructure(
             @PathVariable("syllabusName") String syllabusName,
             @PathVariable("courseTypeName") String courseTypeName,
             @RequestBody CourseInputForm courseInputForm
     ) {
-        return new RequestResponse(
-                "saved",
-                courseInputFormServices.saveOrUpdateFormStructure(
-                        syllabusName, courseTypeName, courseInputForm
-                )
+        return courseInputFormServices.saveOrUpdateFormStructure(
+                syllabusName, courseTypeName, courseInputForm
         );
     }
 }

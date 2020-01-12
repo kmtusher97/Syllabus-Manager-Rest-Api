@@ -270,6 +270,12 @@ public class CourseInputFormServices {
         return getCourseInputForm(syllabusName, courseTypeName);
     }
 
+    /**
+     * @param syllabusName
+     * @param courseTypeName
+     * @param courseInputForm
+     * @return
+     */
     public CourseInputForm saveOrUpdateFormStructure(
             String syllabusName, String courseTypeName, CourseInputForm courseInputForm
     ) {
@@ -277,7 +283,7 @@ public class CourseInputFormServices {
             return null;
         }
 
-        /*baseXServices.write(
+        baseXServices.write(
                 "delete node //syllabus[@name=\""
                         + syllabusName + "\"]//courseType[@name=\""
                         + courseTypeName + "\"]//courseInputForm"
@@ -286,10 +292,10 @@ public class CourseInputFormServices {
         baseXServices.write(
                 "insert node "
                         + jaxbServices.objectToXmlString(courseInputForm, false)
-                        + " into /syllabus[@name=\""
+                        + " into //syllabus[@name=\""
                         + syllabusName + "\"]//courseType[@name=\""
                         + courseTypeName + "\"]"
-        );*/
+        );
 
         return (CourseInputForm) jaxbServices.xmlStringToObject(
                 getCourseInputForm(syllabusName, courseTypeName),
