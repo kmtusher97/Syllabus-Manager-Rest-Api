@@ -13,6 +13,16 @@ public class CourseInputFromCreatorController {
     @Autowired
     private CourseInputFormServices courseInputFormServices;
 
+    @GetMapping("/{syllabusName}/{courseTypeName}/get_form")
+    public CourseInputForm getCourseInputFormByCourseTypeName(
+            @PathVariable("syllabusName") String syllabusName,
+            @PathVariable("courseTypeName") String courseTypeName
+    ) {
+        return  courseInputFormServices.getCourseInputForm(
+                syllabusName, courseTypeName
+        );
+    }
+
     @GetMapping("/{syllabusName}/{courseTypeName}/add_new_section")
     public CourseInputForm addNewFormSection(
             @PathVariable("syllabusName") String syllabusName,
