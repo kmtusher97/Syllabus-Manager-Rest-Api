@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -java target/asd.jar -Dserver.port=$PORT $JAR_OPTS
