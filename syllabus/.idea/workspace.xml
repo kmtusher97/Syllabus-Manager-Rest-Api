@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="06d962db-60e6-407c-b3d9-800e0533c1cd" name="Default Changelist" comment="Merge branch 'domain' into syllabus-services&#10;&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/SyllabusApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/configuration/BaseXConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/controller/CourseInputFromCreatorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/controller/CourseTypeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/controller/SyllabusController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/controller/SyllabusEditorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/model/bundle/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/model/bundle/CourseInputForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/model/bundle/CourseStructure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/model/contents/Content.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/model/contents/ContentBundle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/model/contents/CourseInputFormSection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/model/contents/Table.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/model/contents/TableRow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/model/contents/TextArea.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/repository/BaseXRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/service/basex/BaseXServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/service/jaxb/JAXBServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/service/syllabus/CourseInputFormServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/service/syllabus/CourseTypeServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/service/syllabus/FormContentTableServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/syllabus/syllabus/service/syllabus/SyllabusServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/xml/syllabus.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/manager/syllabus/syllabus/SyllabusApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/manager/syllabus/syllabus/service/JAXBServicesTest.java" beforeDir="false" />
+    </list>
+    <list id="30c8ac76-e2be-4e60-bd8b-4a031242e20b" name="Merge branch 'domain' into syllabus-services  # Please enter a commit message to explain why this merge is necessary, # especially if it merges an updated upstream into a topic branch. # # Lines starting with '#' will be ignored, and an empty message aborts # the commit." comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Ul22hnnYDKehjQm6rjBBiBqEwr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Web-App-For-CSEJU/cseju" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.manager.syllabus.syllabus.service" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.manager.syllabus.syllabus.service" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SyllabusApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.manager.syllabus.syllabus.SyllabusApplication" />
+      <module name="syllabus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.manager.syllabus.syllabus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SyllabusApplication" />
+        <item itemvalue="Application.SyllabusApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06d962db-60e6-407c-b3d9-800e0533c1cd" name="Default Changelist" comment="" />
+      <changelist id="30c8ac76-e2be-4e60-bd8b-4a031242e20b" name="Merge branch 'domain' into syllabus-services  # Please enter a commit message to explain why this merge is necessary, # especially if it merges an updated upstream into a topic branch. # # Lines starting with '#' will be ignored, and an empty message aborts # the commit." comment="" />
+      <created>1575916655494</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575916655494</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Merge branch 'jaxb' into domain&#10;&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
+      <created>1576956967128</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576956967128</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Merge branch 'domain' into syllabus-services&#10;&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
+      <created>1576961101403</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576961101403</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Merge branch 'domain' into syllabus-services&#10;&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
+      <created>1578846694154</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578846694154</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Merge branch 'domain' into syllabus-services&#10;&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
+      <created>1578846708586</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578846708586</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge branch 'jaxb' into domain&#10;&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit." />
+    <MESSAGE value="Merge branch 'domain' into syllabus-services&#10;&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'domain' into syllabus-services&#10;&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="844" y="79" width="374" height="689" key="#com.intellij.ide.util.MemberChooser" timestamp="1578851416072">
+      <screen x="46" y="27" width="1320" height="741" />
+    </state>
+    <state x="844" y="79" width="374" height="689" key="#com.intellij.ide.util.MemberChooser/46.27.1320.741@46.27.1320.741" timestamp="1578851416072" />
+    <state x="763" y="258" width="561" height="297" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1575918869311">
+      <screen x="46" y="27" width="1320" height="741" />
+    </state>
+    <state x="763" y="258" width="561" height="297" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/46.27.1320.741@46.27.1320.741" timestamp="1575918869311" />
+    <state x="277" y="27" width="847" height="741" key="CommitChangelistDialog2" timestamp="1578846708594">
+      <screen x="46" y="27" width="1320" height="741" />
+    </state>
+    <state x="277" y="27" width="847" height="741" key="CommitChangelistDialog2/46.27.1320.741@46.27.1320.741" timestamp="1578846708594" />
+    <state x="489" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1578771092977">
+      <screen x="46" y="27" width="1320" height="741" />
+    </state>
+    <state x="489" y="155" width="424" height="491" key="FileChooserDialogImpl/46.27.1320.741@46.27.1320.741" timestamp="1578771092977" />
+    <state width="1274" height="483" key="GridCell.Tab.0.bottom" timestamp="1579960857375">
+      <screen x="46" y="27" width="1320" height="741" />
+    </state>
+    <state width="1274" height="483" key="GridCell.Tab.0.bottom/46.27.1320.741@46.27.1320.741" timestamp="1579960857375" />
+    <state width="1274" height="483" key="GridCell.Tab.0.center" timestamp="1579960857374">
+      <screen x="46" y="27" width="1320" height="741" />
+    </state>
+    <state width="1274" height="483" key="GridCell.Tab.0.center/46.27.1320.741@46.27.1320.741" timestamp="1579960857374" />
+    <state width="1274" height="483" key="GridCell.Tab.0.left" timestamp="1579960857374">
+      <screen x="46" y="27" width="1320" height="741" />
+    </state>
+    <state width="1274" height="483" key="GridCell.Tab.0.left/46.27.1320.741@46.27.1320.741" timestamp="1579960857374" />
+    <state width="1274" height="483" key="GridCell.Tab.0.right" timestamp="1579960857375">
+      <screen x="46" y="27" width="1320" height="741" />
+    </state>
+    <state width="1274" height="483" key="GridCell.Tab.0.right/46.27.1320.741@46.27.1320.741" timestamp="1579960857375" />
+    <state x="124" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1578751529501">
+      <screen x="46" y="27" width="1320" height="741" />
+    </state>
+    <state x="124" y="27" width="1024" height="741" key="SettingsEditor/46.27.1320.741@46.27.1320.741" timestamp="1578751529501" />
+    <state x="362" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1580378878922">
+      <screen x="46" y="27" width="1320" height="741" />
+    </state>
+    <state x="362" y="225" key="com.intellij.ide.util.TipDialog/46.27.1320.741@46.27.1320.741" timestamp="1580378878922" />
+    <state x="739" y="118" width="584" height="566" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1575978961268">
+      <screen x="46" y="27" width="1320" height="741" />
+    </state>
+    <state x="739" y="118" width="584" height="566" key="com.intellij.testIntegration.createTest.CreateTestDialog/46.27.1320.741@46.27.1320.741" timestamp="1575978961268" />
+    <state x="369" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1578764396174">
+      <screen x="46" y="27" width="1320" height="741" />
+    </state>
+    <state x="369" y="89" width="672" height="678" key="search.everywhere.popup/46.27.1320.741@46.27.1320.741" timestamp="1578764396174" />
+    <state x="46" y="151" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1578846819440">
+      <screen x="46" y="27" width="1320" height="741" />
+    </state>
+    <state x="46" y="151" key="vcs.ApplyPatchDifferentiatedDialog/46.27.1320.741@46.27.1320.741" timestamp="1578846819440" />
+  </component>
+</project>
