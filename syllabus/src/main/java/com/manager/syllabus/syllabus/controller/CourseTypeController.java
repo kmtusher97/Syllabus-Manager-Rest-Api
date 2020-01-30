@@ -8,7 +8,7 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
-@RequestMapping(path = "syllabus/course_type")
+@RequestMapping(path = "api/syllabus/course_type")
 public class CourseTypeController {
 
     @Autowired

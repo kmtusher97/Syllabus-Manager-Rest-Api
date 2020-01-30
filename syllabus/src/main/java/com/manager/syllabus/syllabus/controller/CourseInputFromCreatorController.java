@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
 @RestController
-@RequestMapping(path = "syllabus/create_form")
+@RequestMapping(path = "api/syllabus/create_form")
 public class CourseInputFromCreatorController {
 
     @Autowired

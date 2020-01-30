@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
 @RestController
-@RequestMapping(path = "syllabus")
+@RequestMapping(path = "api/syllabus")
 public class SyllabusController {
 
     @Autowired
