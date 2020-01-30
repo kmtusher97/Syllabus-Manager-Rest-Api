@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<syllabuses>
+    <syllabus name="syl1">
+        <courseTypes>
+            <courseType name="Theory">
+                <courseInputForm>
+                    <courseInputFormSections>
+                        <courseInputFormSection serialId="101">
+                            <selectedContent>TextArea</selectedContent>
+                            <table contentId="101">
+                                <title>Untitled Table</title>
+                                <fields>
+                                    <field>New Field</field>
+                                </fields>
+                                <rows/>
+                            </table>
+                            <textArea contentId="101">
+                                <title>Untitled TextArea</title>
+                                <textBody>Empty Text Body</textBody>
+                            </textArea>
+                        </courseInputFormSection>
+                        <courseInputFormSection serialId="102">
+                            <selectedContent>Table</selectedContent>
+                            <table contentId="102">
+                                <title>Untitled Table</title>
+                                <fields>
+                                    <field>New Field</field>
+                                </fields>
+                                <rows/>
+                            </table>
+                            <textArea contentId="102">
+                                <title>Untitled TextArea</title>
+                                <textBody>Empty Text Body</textBody>
+                            </textArea>
+                        </courseInputFormSection>
+                    </courseInputFormSections>
+                </courseInputForm>
+            </courseType>
+            <courseType name="Laboratory">
+                <courseInputForm>
+                    <courseInputFormSections/>
+                </courseInputForm>
+            </courseType>
+        </courseTypes>
+        <year id="1">
+            <semester id="1"/>
+            <semester id="2"/>
+        </year>
+        <year id="2"/>
+    </syllabus>
+</syllabuses>
