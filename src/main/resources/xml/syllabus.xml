@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <syllabuses>
     <syllabus name="syl1">
+        <effectiveFrom>2018</effectiveFrom>
+        <effectiveTo>2022</effectiveTo>
+        <syllabusType>undergrad</syllabusType>
         <courseTypes>
             <courseType name="Theory">
                 <courseInputForm>
