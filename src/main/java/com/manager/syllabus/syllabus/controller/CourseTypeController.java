@@ -28,7 +28,7 @@ public class CourseTypeController {
     }
 
     @GetMapping("/edit/{syllabusName}/add/course_type/{courseTypeName}")
-    public String addNewCourseType(
+    public List<String> addNewCourseType(
             @PathVariable("syllabusName") String syllabusName,
             @PathVariable("courseTypeName") String courseTypeName
     ) {
@@ -36,7 +36,7 @@ public class CourseTypeController {
     }
 
     @DeleteMapping("/edit/{syllabusName}/delete/course_type/{courseTypeName}")
-    public String deleteCourseTypeByCourseTypeName(
+    public List<String> deleteCourseTypeByCourseTypeName(
             @PathVariable("syllabusName") String syllabusName,
             @PathVariable("courseTypeName") String courseTypeName
     ) {
