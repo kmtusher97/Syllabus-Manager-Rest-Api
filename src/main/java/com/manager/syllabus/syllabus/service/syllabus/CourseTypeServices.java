@@ -75,16 +75,16 @@ public class CourseTypeServices {
      * @param courseTypeName
      * @return
      */
-    public String addNewCourseType(String syllabusName, String courseTypeName) {
+    public List<String> addNewCourseType(String syllabusName, String courseTypeName) {
         if (doesCourseTypeExist(syllabusName, courseTypeName) == true) {
-            return getCourseTypes(syllabusName);
+            return getAllCourseTypeNames(syllabusName);
         }
         baseXServices.write(
                 "insert node <courseType name=\"" + courseTypeName + "\"/> into //syllabus[@name=\"" +
                         syllabusName + "\"]/courseTypes"
         );
         courseInputFormServices.createInitialForm(syllabusName, courseTypeName);
-        return getCourseTypes(syllabusName);
+        return getAllCourseTypeNames(syllabusName);
     }
 
     /**
@@ -92,14 +92,14 @@ public class CourseTypeServices {
      * @param courseTypeName
      * @return
      */
-    public String deleteCourseType(String syllabusName, String courseTypeName) {
+    public List<String> deleteCourseType(String syllabusName, String courseTypeName) {
         if (doesCourseTypeExist(syllabusName, courseTypeName) == false) {
-            return getCourseTypes(syllabusName);
+            return getAllCourseTypeNames(syllabusName);
         }
         baseXServices.write(
                 "delete node //syllabus[@name=\"" + syllabusName + "\"]//courseType[@name=\"" +
                         courseTypeName + "\"]"
         );
-        return getCourseTypes(syllabusName);
+        return getAllCourseTypeNames(syllabusName);
     }
 }
