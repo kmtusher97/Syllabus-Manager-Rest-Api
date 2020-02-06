@@ -1,0 +1,2 @@
+(this["webpackJsonpcseju-office-management-app"]=this["webpackJsonpcseju-office-management-app"]||[]).push([[8],{105:function(e,t,n){"use strict";n.r(t);var a=n(8),c=n(9),u=n(11),r=n(10),i=n(12),s=n(0),p=n.n(s),o=function(e){function t(){return Object(a.a)(this,t),Object(u.a)(this,Object(r.a)(t).apply(this,arguments))}return Object(i.a)(t,e),Object(c.a)(t,[{key:"render",value:function(){return p.a.createElement("div",null,p.a.createElement("h1",null,"Dashboard"))}}]),t}(s.Component);t.default=o}}]);
+//# sourceMappingURL=8.96820f7f.chunk.js.map
