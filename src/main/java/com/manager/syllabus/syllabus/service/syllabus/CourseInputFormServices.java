@@ -152,10 +152,12 @@ public class CourseInputFormServices {
     public CourseInputForm deleteFormSectionBySectionSerialId(
             String syllabusName, String courseTypeName, Integer sectionSerialId
     ) {
-        if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false ||
-                doesFormSectionExist(syllabusName, courseTypeName, sectionSerialId) == false
-        ) {
+        if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false) {
             return null;
+        }
+
+        if (doesFormSectionExist(syllabusName, courseTypeName, sectionSerialId) == false) {
+            getCourseInputForm(syllabusName, courseTypeName);
         }
 
         baseXServices.write(
@@ -218,14 +220,13 @@ public class CourseInputFormServices {
     public CourseInputForm deleteFieldFromTableInFormSectionBySerialNo(
             String syllabusName, String courseTypeName, Integer sectionSerialId, Integer fieldId
     ) {
-        if (courseTypeServices.doesCourseTypeExist(
-                syllabusName, courseTypeName) == false ||
-                doesFormSectionExist(
-                        syllabusName, courseTypeName, sectionSerialId) == false ||
-                formContentTableServices.doesFieldExistInTable(
-                        syllabusName, courseTypeName, sectionSerialId, fieldId) == false
-        ) {
+        if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false) {
             return null;
+        }
+        if (doesFormSectionExist(syllabusName, courseTypeName, sectionSerialId) == false ||
+                formContentTableServices.doesFieldExistInTable(
+                        syllabusName, courseTypeName, sectionSerialId, fieldId) == false) {
+            return getCourseInputForm(syllabusName, courseTypeName);
         }
 
         formContentTableServices.deleteFieldFromTableInFormSectionBySerialNo(
@@ -244,9 +245,11 @@ public class CourseInputFormServices {
     public CourseInputForm addNewFieldInTableOfFormSection(
             String syllabusName, String courseTypeName, Integer sectionSerialId
     ) {
-        if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false ||
-                doesFormSectionExist(syllabusName, courseTypeName, sectionSerialId) == false) {
+        if (courseTypeServices.doesCourseTypeExist(syllabusName, courseTypeName) == false) {
             return null;
+        }
+        if (doesFormSectionExist(syllabusName, courseTypeName, sectionSerialId) == false) {
+            return getCourseInputForm(syllabusName, courseTypeName);
         }
 
         formContentTableServices.addNewFieldInTableOfFormSection(
