@@ -16,6 +16,16 @@ public class SyllabusServices {
 
     /**
      * @param syllabusName
+     * @return True if a syllabus exists with name = syllabusName
+     */
+    public Boolean isSyllabusExists(String syllabusName) {
+        return (baseXServices.read(
+                "exists(//syllabus[@name=\"" + syllabusName + "\"])"
+        ).equals("true"));
+    }
+
+    /**
+     * @param syllabusName
      * @return full syllabus as XML string
      */
     public String getSyllabusBySyllabusName(String syllabusName) {
@@ -89,12 +99,10 @@ public class SyllabusServices {
      * @param yearId
      * @return
      */
-    private Boolean isYearExistsInSyllabus(String syllabusName, Integer yearId) {
-        return (
-                baseXServices.read(
-                        "exists(//syllabus[@name=\"" + syllabusName + "\"]//year[@id=\"" + yearId + "\"])"
-                ).equals("true")
-        );
+    public Boolean isYearExistsInSyllabus(String syllabusName, Integer yearId) {
+        return (baseXServices.read(
+                "exists(//syllabus[@name=\"" + syllabusName + "\"]//year[@id=\"" + yearId + "\"])"
+        ).equals("true"));
     }
 
     /**
@@ -135,13 +143,11 @@ public class SyllabusServices {
      * @param semesterId
      * @return
      */
-    private Boolean isSemesterExistsInYear(String syllabusName, Integer yearId, Integer semesterId) {
-        return (
-                baseXServices.read(
-                        "exists(//syllabus[@name=\"" + syllabusName + "\"]//year[@id=\"" + yearId +
-                                "\"]//semester[@id=\"" + semesterId + "\"])"
-                ).equals("true")
-        );
+    public Boolean isSemesterExistsInYear(String syllabusName, Integer yearId, Integer semesterId) {
+        return (baseXServices.read(
+                "exists(//syllabus[@name=\"" + syllabusName + "\"]//year[@id=\"" + yearId +
+                        "\"]//semester[@id=\"" + semesterId + "\"])"
+        ).equals("true"));
     }
 
     /**
@@ -170,13 +176,16 @@ public class SyllabusServices {
      * @param courseCode
      * @return
      */
-    private Boolean isCourseExistsInSemester(String syllabusName, Integer yearId, Integer semesterId, String courseCode) {
-        return (
-                baseXServices.read(
-                        "exists(//syllabus[@name=\"" + syllabusName + "\"]//year[@id=\"" + yearId +
-                                "\"]//semester[@id=\"" + semesterId + "\"]//course[@courseCode=\"" + courseCode + "\"])"
-                ).equals("true")
-        );
+    public Boolean isCourseExistsInSemester(
+            String syllabusName,
+            Integer yearId,
+            Integer semesterId,
+            String courseCode
+    ) {
+        return (baseXServices.read(
+                "exists(//syllabus[@name=\"" + syllabusName + "\"]//year[@id=\"" + yearId +
+                        "\"]//semester[@id=\"" + semesterId + "\"]//course[@courseCode=\"" + courseCode + "\"])"
+        ).equals("true"));
     }
 
     /**
