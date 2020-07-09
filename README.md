@@ -34,7 +34,7 @@ It comes with interactive user interfaces (desktop, web-based) that give you gre
 **method:** `POST`   
 **url:** `localhost:8081/api/syllabus/edit/{syllabusName}/{yearId}/{semesterId}/add/course`  
  **data:** `{"courseCode": "CSE 101"}`
-- Get a syllabus by syllabus name(as XML)  
+>- Get a syllabus by syllabus name(as XML)  
     **method:** `DELETE` 
     **url:** `localhost:8081/syllabus/edit/{syllabusName}/{yearId}/{semesterId}/delete/course/{courseCode}` 
 
