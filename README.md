@@ -5,7 +5,7 @@
 # Syllabus Manager Rest Api . ![framework](https://img.shields.io/badge/spring--boot-2.2.2.RELEASE-green) ![maven](https://img.shields.io/badge/maven-3.6.0-orange)  ![java](https://img.shields.io/badge/java-8-blue) 
 A RESTful API to create syllabus. It allows to create curse types(Theory, Laboratory, Viva etc) and corresponding input forms for the courses. Syllabus is stored as XML. The CRUD operation in the XML Database is handled with BaseX.
 
-## BaseX ![basex](https://img.shields.io/badge/basex-9.0-red) ![xml](https://img.shields.io/badge/-XML-red)
+## BaseX . ![basex](https://img.shields.io/badge/basex-9.0-red) ![xml](https://img.shields.io/badge/-XML-red) ![xquery](https://img.shields.io/badge/XQuery-3.1-red)
 BaseX is a robust, high-performance XML database engine and a highly compliant XQuery 3.1 processor with full support of the W3C Update and Full Text extensions. It serves as excellent framework for building complex data-intensive web applications.
 It comes with interactive user interfaces (desktop, web-based) that give you great insight into your data. <a href="https://basex.org/">more..</a>
 
