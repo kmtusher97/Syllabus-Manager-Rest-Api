@@ -1,10 +1,8 @@
 <a href="https://spring.io/projects/spring-boot"><img src="https://spring.io/images/spring-initializr-4291cc0115eb104348717b82161a81de.svg" height="100px" /></a>
 <a href="https://basex.org/"><img src="https://basex.org/images/basex.svg" height="100px" /></a>
+<br>
 
-<br/>
-![framework](https://img.shields.io/badge/spring--boot-2.2.2.RELEASE-green) ![maven](https://img.shields.io/badge/maven-3.6.0-orange)  ![java](https://img.shields.io/badge/java-8-blue) 
-
-# Syllabus Manager Rest Api  
+# Syllabus Manager Rest Api . ![framework](https://img.shields.io/badge/spring--boot-2.2.2.RELEASE-green) ![maven](https://img.shields.io/badge/maven-3.6.0-orange)  ![java](https://img.shields.io/badge/java-8-blue) 
 A RESTful API to create syllabus. It allows to create curse types(Theory, Laboratory, Viva etc) and corresponding input forms for the courses. Syllabus is stored as XML. The CRUD operation in the XML Database is handled with BaseX.
 
 ## BaseX ![basex](https://img.shields.io/badge/basex-9.0-red) ![xml](https://img.shields.io/badge/-XML-red)
